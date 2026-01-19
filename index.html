@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer> </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1> '26 Book Library </h1>
+        <div class="cards-container"> 
+        </div>
+
+        <button class="new-book"> Add a Book </button>
+
+        <dialog class="dialog">
+            <form class="form" method="dialog">
+                <div class="input-container">
+                    <p class="input-header"> Enter book details </p>
+                    <div class="input-field">
+                        <label for="title"> Book title </label>
+                        <input type="text" id="title" placeholder="e.g Things Fall Apart" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="author"> Author</label>
+                        <input type="text" id="author" placeholder="Chinua Achebe" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="pages">No of Pages</label>
+                        <input type="number" id="pages" placeholder="314"required>
+                    </div>
+                    <div class="checkbox-field">
+                        <p class="checkbox-header"> Have you read this book? </p>
+                        <input type="checkbox" id="read">
+                    </div>
+                </div>
+                <button class="submit" type="submit">Add book</button>
+            </form>
+        </dialog>
+    </div>
+</body>
+</html>
