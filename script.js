@@ -1,15 +1,34 @@
 let myLibrary = [];
 const cardColors = ["#FCF2A4", "#6CFAD1", "#FFFFFF", "#F7DEFF"];
 
-//Book constructor
-function Book(title, author, pages, read) {
+//Book Class
+class Book {
+   constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.color = cardColors[Math.floor(Math.random() * cardColors.length)];;
     this.ID = crypto.randomUUID();
+   }
+
+   toggleReadStatus() {
+        if (this.read === "Read") {
+            this.read = "Unread";
+        }
+        else { this.read = "Read"; }
+   }
 }
+
+// Book constructor
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.color = cardColors[Math.floor(Math.random() * cardColors.length)];;
+//     this.ID = crypto.randomUUID();
+// }
 
 //Add book to library
 function addBookToLibrary(title, author, pages, read,) {
@@ -86,13 +105,13 @@ function display() {
 const button = document.querySelector(".new-book");
 const dialog = document.querySelector(".dialog");
 
-//Toggle read property between read/unread
-Book.prototype.toggleReadStatus = function() {
-  if (this.read === "Read") {
-    this.read = "Unread";
-  }
-  else { this.read = "Read"; }
-}
+// Toggle read property between read/unread
+// Book.prototype.toggleReadStatus = function() {
+//   if (this.read === "Read") {
+//     this.read = "Unread";
+//   }
+//   else { this.read = "Read"; }
+// }
 
 //Show modal
 button.addEventListener("click", () => {
